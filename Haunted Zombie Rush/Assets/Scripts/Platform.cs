@@ -14,7 +14,7 @@ public class Platform : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	public virtual void Update () {
 		transform.Translate (Vector3.left * (platformSpeed * Time.deltaTime));
 
 		if (transform.localPosition.x <= resetPlatformPosition) {
