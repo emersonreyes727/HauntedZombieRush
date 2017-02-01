@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour {
 
+	[SerializeField] private float platformSpeed;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -11,6 +13,8 @@ public class Platform : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		transform.Translate (Vector3.left * (platformSpeed * Time.deltaTime));
+
+
 	}
 }
